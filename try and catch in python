@@ -1,0 +1,18 @@
+try:
+    n1= int(input("enter any numbr"))
+    n2=int(input("enter any numbr"))
+    print("divesion",n1/n2)
+except ZeroDivisionError:
+    print("DON'T entrer zero")
+except  ValueError:
+    print("plez enter a specif value")
+finally:
+    print("program end")
+
+
+
+age = int(input("enter your age"))
+if age>=18:
+    print("take it ")
+else:
+    raise  Exception("you are not age inough")
