@@ -1,0 +1,34 @@
+# number game
+print("welcome to the game guess the number")
+print("you have total 9 chance")
+print("********lets start*************")
+hn=10
+guess = 0
+choice = 9
+while(guess<=8):
+    num = int(input("enter any number :"))
+    if num>hn:
+        print("number is GRATR ")
+        guess=guess+1
+        choice=choice-1
+
+        print("total guss is ",guess)
+        print("left choice is ",choice)
+    elif num < hn:
+        print("number is less ")
+        guess = guess + 1
+        choice = choice - 1
+
+        print("total guss is ", guess)
+        print("left choice is ", choice)
+
+    elif(num==hn):
+        print("******** :) :)  you won :) :)********** ")
+        guess=guess+1
+    continue
+if guess>8:
+    print("********* :( :(  game over  :(  :(  ******************")
+    print("***** :( :(  you loss  :(  :(  **************")
+
+
+
