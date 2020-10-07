@@ -1,0 +1,8 @@
+# condetion for driving
+age = int(input("enter ypur age"))
+if (age>18 and age<90):
+    print("you can drive")
+elif (age<18 and age>5) :
+    print("you will not drive")
+elif age == 18:
+    print("can't deside meet and then we tell")
