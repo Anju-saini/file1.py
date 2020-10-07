@@ -1,0 +1,65 @@
+# inherat class
+class Parent:
+    Parent_property = ' '
+    __Parent_private_property = 1000
+
+    def Parent_method(self):
+        print("example of parent class")
+
+
+
+class SubParent(Parent):
+    def sub_parent_metod(self):
+        print('example of sub parent method')
+
+
+class Child(SubParent):
+    pass
+
+
+c = Child()
+c.sub_parent_metod()
+c.Parent_method()
+
+
+#polymorphism
+class Bird:
+    def flying(self):
+        print("yes you can fly")
+    def walking(self):
+        print("yes i can walk")
+
+class Sparrow(Bird):
+    pass
+class pengiun(Bird):
+    def flying(self):
+        print("i can't fly")
+
+s = Sparrow()
+s.flying()
+p = pengiun()
+p.flying()
+p.walking()
+
+
+# superclass
+class Person:
+    def __init__(self , name , f_name):
+        self.name = name
+        self.f_name = f_name
+
+
+    def general_info(self):
+        print('name = {}\n f_name = {}'.format(self.name,self.f_name))
+
+
+class Student(Person):
+    def __init__(self,name,f_name,roll_no):
+        super().__init__(name,f_name)
+        self.roll_no = roll_no
+
+    def student_info(self):
+        print("name = {}\n f_name = {}\n roll_no{}".format(self.name,self.f_name,self.roll_no))
+s = Student("ashi","mohan",37)
+s.general_info()
+s.student_info()
