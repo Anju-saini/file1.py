@@ -1,0 +1,95 @@
+def getdate():
+   import  datetime
+   return datetime.datetime.now()
+def take(k):
+    try:
+        if k==1:
+            c= int(input("enter 1 for exercise and 2  for food :"))
+            if c==1:
+                value= input("type hear\n")
+                with open("harry_exe.txt","a")as op:
+                    op.write(str([getdate()])+":"+value+"\n")
+                print("sucessfull written :) ")
+            elif(c==2):
+                value= input("type hear\n")
+                with open("harry_food.txt","a")as op:
+                    op.write(str([getdate()])+":"+value+"\n")
+                print("sucessfull written  :) ")
+        elif k==2:
+            c = int(input("enter 1 for exercise and 2  for food :"))
+            if c == 1:
+                value = input("type hear\n")
+                with open("rohan_exe.txt", "a")as op:
+                    op.write(str([getdate()]) + ":" + value + "\n")
+                print("sucessfull written :)")
+            elif (c == 2):
+                value = input("type hear\n")
+                with open("rohan_food.txt", "a")as op:
+                    op.write(str([getdate()]) + ":" + value + "\n")
+                print("sucessfull written :)")
+        elif k==3:
+            c = int(input("enter 1 for exercise and 2  for food :"))
+            if c == 1:
+                value = input("type hear\n")
+                with open("hammad_exe.txt", "a")as op:
+                    op.write(str([getdate()]) + ":" + value + "\n")
+                print("sucessfull written :)")
+            elif (c == 2):
+                value = input("type hear\n")
+                with open("hammad_food.txt", "a")as op:
+                    op.write(str([getdate()]) + ":" + value + "\n")
+                print("sucessfull written :)")
+        else:
+            print("please enter valid input")
+            print("1 for harry 2 for rohan and 3 for hammad :")
+    except Exception as t:
+        print(t)
+def retrive(k):
+    if k==1:
+        c=int(input("enter 1 for exercise and 2 for food : "))
+        if c==1:
+            with open("harry_exe.txt")as op:
+                for i in op:
+                    print(i ,end=" ")
+        elif c==2:
+            with open("harry_food.txt") as op:
+                for i in op:
+                    print(i,end=" ")
+    if k == 2:
+        c = int(input("enter 1 for exercise and 2 for food :"))
+        if c == 1:
+            with open("rohan_exe.txt")as op:
+                for i in op:
+                    print(i, end=" ")
+        elif c == 2:
+            with open("rohan_food.txt") as op:
+                for i in op:
+                    print(i, end=" ")
+    if k == 3:
+        c = int(input("enter 1 for exercise and 2 for food : "))
+        if c == 1:
+            with open("hammad_exe.txt")as op:
+                for i in op:
+                    print(i, end=" ")
+        elif c == 2:
+            with open("hammad_food.txt") as op:
+                for i in op:
+                    print(i, end=" ")
+    else:
+        print("enter a valid input 1 for exercise and 2 for food ")
+
+
+print("helth menagment system")
+a=int(input("press 1 for log 2 for rerive :"))
+try:
+    if a==1:
+        b=int(input("press 1 for harry  2 for rohan and 3 for hammad :)"))
+        take(b)
+    elif a==2:
+        b = int(input("press 1 for harry  2 for rohan and 3 for hammad :)"))
+        retrive(b)
+    else:
+        print("invalid input")
+
+except Exception as e:
+    print(e)
