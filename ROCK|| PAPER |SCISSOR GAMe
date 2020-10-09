@@ -1,0 +1,44 @@
+# ******* ROCK ||  PAPER |  SCISSOR GAME
+import random
+print("**********GAME START********")
+total_chance = int(input("number of time you want to play the game: "))
+
+u_score = 0
+c_score = 0
+left_chance = 0
+
+while(total_chance!=0):
+    user = (str(input("enter  rock(r)  ,paper(p) ,Scissor(s)")))
+
+    lst = ("r","p","s")
+    com = random.choice(lst)
+    print(com)
+    total_chance-=1
+    if (user==com):
+        print("draw \ntry agin")
+    elif (user=="r" and com=="p"):
+        c_score+=1
+        print(f"computer win\n your score is{u_score} and computer score is {c_score}")
+    elif(user=="r" and com=="s"):
+        u_score+=1
+        print(f"you win\n your score is{u_score} and computer score is {c_score}")
+    elif (user=="p" and com=="s"):
+        c_score+=1
+        print(f"computer win\n your score is{u_score} and computer score is {c_score}")
+    elif(user=="p" and com=="r"):
+        u_score+=1
+        print(f"you win\n your score is{u_score} and computer score is {c_score}")
+    elif (user=="s" and com=="r"):
+        c_score+=1
+        print(f"computer win\n your score is{u_score} and computer score is {c_score}")
+    elif(user=="s" and com=="p"):
+        u_score+=1
+        print(f"you win\n your score is{u_score} and computer score is {c_score}")
+
+if (u_score<c_score):
+    print("************ :( you loss :( ***************")
+elif (u_score>c_score):
+    print("*************:) You win :) ************** ")
+elif(u_score==c_score):
+    print("************  Match draw  ***************")
+
