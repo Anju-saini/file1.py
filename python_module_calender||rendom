@@ -1,0 +1,21 @@
+# *******python module calender***************
+import calendar
+print("calender module in python")
+print("your calender\n\n")
+y=int(input("enter year :"))
+m=int(input("enter month :"))
+mycalender=calendar.month(y,m)
+print(mycalender)
+
+#******* random module *******************
+print("random module in python")
+import random
+random_number =  random.randint(2,100)
+print("it is for select rendom no in given range:")
+print(random_number)
+rend = random.random()*10
+print(rend)
+print("for secect a rendoom choice")
+lst = ["ashi","anuj","pooja","aarti"]
+choice = random.choice(lst)
+print(choice)
